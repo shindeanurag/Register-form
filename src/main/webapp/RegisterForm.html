@@ -1,184 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Form</title>
+
 <style>
-       
-       body, h1, form {
-           margin: 1px;
-           padding: 10px;
-           font-family: Arial, sans-serif;
-       }
+body, h1, form {
+	margin: 10px;
+	padding: 10px;
+  font-family: Arial, sans-serif;
+}
 
-       body {
-           background-color: #f4f7fc;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-       }
+body {
+	background-color: #f4f7fc;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	max-height: 10px;
+	margin-top: 10px;
+}
 
-       form {
-       	
-           background-color: #fff;
-           width: 100%;
-           max-width: 400px;
-           padding: 40px;
-           border-radius: 10px;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-           font-size: 16px;
-           
-      }
+form {
+	background-color: #fff;
+	width: 100%;
+	max-width: 600px;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+    justify-content: center;
+}
 
-       h1 {
-           text-align: center;
-           color: #333;
-           margin-bottom: 20px;
-       }
+h1 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
 
-       label {
-           font-weight: bold;
-           color: #333;
-           margin-bottom: 8px;
-           display: block;
-       }
+label {
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 5px;
+	display: block;
+}
 
-       input[type="text"],
-       input[type="email"],
-       input[type="number"],
-       input[type="date"],
-       input[type="password"],
-       input[type="tel"] {
-           width: 100%;
-           padding: 12px;
-           margin: 8px 0;
-           border: 1px solid #ccc;
-           border-radius: 5px;
-           font-size: 16px;
-           background-color: #f9f9f9;
-       }
+input[type="text"], input[type="email"], input[type="number"], input[type="date"],
+	input[type="password"], input[type="tel"] {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #f9f9f9;
+}
 
-       input[type="text"]:focus,
-       input[type="email"]:focus,
-       input[type="number"]:focus,
-       input[type="password"]:focus,
-       input[type="date"]:focus,
-       input[type="tel"]:focus {
-           border-color: blue;
-           outline: none;
-       }
-       select[id="gender1"]{
-        width: 100%;
-           padding: 12px;
-           margin: 8px 0;
-           border: 1px solid #ccc;
-           border-radius: 5px;
-           font-size: 16px;
-           background-color: #f9f9f9;
-       }
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus,
+	input[type="password"]:focus, input[type="date"]:focus, input[type="tel"]:focus
+	{
+	border-color: blue;
+	outline: none;
+}
 
-       button {
-           width: 100%;
-           padding: 14px;
-           background-color: #4CAF50;
-           color: white;
-           border: none;
-           border-radius: 5px;
-           font-size: 16px;
-           cursor: pointer;
-           transition: background-color 0.3s ease;
-       }
+select[id="gender1"] {
+	width: 100%;
+	padding: 12px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #f9f9f9;
+}
 
-       button:hover {
-           background-color: #45a049;
-       }
+button {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
 
-       .gender-group {
-           margin-bottom: 16px;
-       }
+button:hover {
+	background-color: #45a049;
+}
 
-       .gender-group input {
-           margin-right: 10px;
-       }
+.gender-group {
+	margin-bottom: 16px;
+}
 
-       .form-footer {
-           text-align: center;
-           margin-top: 20px;
-           font-size: 14px;
-           color: #888;
-       }
+.gender-group input {
+	margin-right: 10px;
+}
 
-       .form-footer a {
-           color: #4CAF50;
-           text-decoration: none;
-       }
+.form-footer {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #888;
+}
 
-       .form-footer a:hover {
-           text-decoration: underline;
-       }
+.form-footer a {
+	color: #4CAF50;
+	text-decoration: none;
+}
+
+.form-footer a:hover {
+	text-decoration: underline;
+}
+
+
 </style>
-    
+
 </head>
 <body>
-    <form action="register" method="post">
-        <div class="h1">
-            <h1 class="h1 h1">Register Form</h1>
-        </div>
-        <div class="inputs">
-            <label for="fname1">First Name:</label>
-            <input type="text" id="fname1" name="fname1" placeholder="Enter your first name" required>
+	<div class="container">
+		<form action="register" method="get">
+			<div class="h1">
+				<h1 class="h1 h1">Register Form</h1>
+			</div>
+			<div class="inputs">
+				<label for="fname1">First Name:</label> <input type="text"
+					id="fname1" name="fname1" placeholder="Enter your first name"
+					required> <label for="lname1">Last Name:</label> <input
+					type="text" id="lname1" name="lname1"
+					placeholder="Enter your last name" required> <label
+					for="email1">Email:</label> <input type="email" id="email1"
+					name="email1" placeholder="Enter your email" required> <label
+					for="mnum1">Mobile Number:</label> <input type="tel" id="mnum1"
+					name="mnum1" placeholder="Enter your mobile number"
+					pattern="[0-9]{10}"> <label for="address1">Address:</label>
+				<input type="text" id="address1" name="address1"
+					placeholder="Enter your address"> <label for="gender1">Gender:</label>
+				<select id="gender1" name="gender1">
+					<option value="" disabled selected>Select your gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select> <label for="dob1">Date of Birth:</label> <input type="date"
+					id="dob1" name="dob1" required> <label for="city1">City:</label>
+				<input type="text" id="city1" name="city1"
+					placeholder="Enter your city" required> <label for="state1">State:</label>
+				<input type="text" id="state1" name="state1"
+					placeholder="Enter your state"> <label for="country1">Country:</label>
+				<input type="text" id="country1" name="country1"
+					placeholder="Enter your country"> <label for="age1">Age:</label>
+				<input type="number" id="age1" name="age1"
+					placeholder="Enter your age" min="0" max="150"> <label
+					for="degree1">Degree:</label> <input type="text" id="degree1"
+					name="degree1" placeholder="Enter your degree"> <label
+					for="pyear1">Passing Year:</label> <input type="number" id="pyear1"
+					name="pyear1" placeholder="Enter your passing year"> <label
+					for="pass1">Password:</label> <input type="password" id="pass1"
+					name="pass1" placeholder="Enter your valid password" required
+					minlength="8">
+			</div>
 
-            <label for="lname1">Last Name:</label>
-            <input type="text" id="lname1" name="lname1" placeholder="Enter your last name" required>
+			<button type="submit" id="sub">Submit</button>
 
-            <label for="email1">Email:</label>
-            <input type="email" id="email1" name="email1" placeholder="Enter your email" required>
-
-            <label for="mnum1">Mobile Number:</label>
-            <input type="tel" id="mnum1" name="mnum1" placeholder="Enter your mobile number" pattern="[0-9]{10}">
-
-            <label for="address1">Address:</label>
-            <input type="text" id="address1" name="address1" placeholder="Enter your address">
-
-            <label for="gender1">Gender:</label>
-            <select id="gender1" name="gender1">
-                <option value="" disabled selected>Select your gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-
-            <label for="dob1">Date of Birth:</label>
-            <input type="date" id="dob1" name="dob1" required>
-
-            <label for="city1">City:</label>
-            <input type="text" id="city1" name="city1" placeholder="Enter your city" required>
-
-            <label for="state1">State:</label>
-            <input type="text" id="state1" name="state1" placeholder="Enter your state">
-
-            <label for="country1">Country:</label>
-            <input type="text" id="country1" name="country1" placeholder="Enter your country">
-
-            <label for="age1">Age:</label>
-            <input type="number" id="age1" name="age1" placeholder="Enter your age" min="0" max="150">
-
-            <label for="degree1">Degree:</label>
-            <input type="text" id="degree1" name="degree1" placeholder="Enter your degree">
-
-            <label for="pyear1">Passing Year:</label>
-            <input type="number" id="pyear1" name="pyear1" placeholder="Enter your passing year">
-
-            <label for="pass1">Password:</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Enter your valid password" required minlength="8">
-        </div>
-        
-        <button type="submit" id="sub">Submit</button>
-        
-        <p>Already have an account? <a href="LoginPage.html">Login</a></p>
-    </form>
+			<p>
+				Already have an account? <a href="LoginPage.html">Login</a>
+			</p>
+		</form>
+	</div>
 </body>
 </html>

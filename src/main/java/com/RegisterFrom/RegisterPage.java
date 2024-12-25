@@ -83,6 +83,7 @@ public class RegisterPage extends HttpServlet {
 			ps.setString(14,pass);
 			ps.addBatch();
 			ps.executeUpdate();
+			c.close();
 		} catch (Exception e) {
 			
 			
